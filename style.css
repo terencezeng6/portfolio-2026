@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --bg: hsl(0, 0%, 95%);
+  --bg-dark: hsl(0, 0%, 90%);
+  --text: hsl(0, 0%, 5%);
+  --accent: hsl(225, 50%, 45%);
+  --line-color: hsl(0, 0%, 0%);
+  --line-weight: 1px;
+}
+
+body {
+  padding: 30px;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+h1 {
+  font-weight: 500;
+}
+
+.layout {
+  /* center layout */
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar {
+  /* fixed width */
+  width: 220px;
+  padding: 20px 40px;
+  /* temporary green for visualization */
+  background-color: var(--bg);
+  border-right: var(--line-weight) solid black;
+  font-family: 'Outfit', sans-serif;
+}
+
+.sidebar p {
+  font-size: 24px;
+}
+
+.content {
+  /* fixed width */
+  width: 600px;
+  padding: 40px 80px;
+  font-family: 'EB Garamond', serif;
+}
+
+.intro p {
+  font-size: 20px;
+}
+
+.timeline-block {
+  margin-top: 60px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.timeline-block p {
+  font-family: 'EB Garamond', serif;
+}
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  padding: 40px 0;
+}
+
+.timeline::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--line-weight);
+  background: var(--line-color);
+}
+
+.timeline>li {
+  padding-left: 40px;
+  margin-bottom: 40px;
+  line-height: 1.8em;
+}
+
+.timeline-item {
+  padding: 25px;
+  border: var(--line-weight) solid var(--line-color);
+  position: relative;
+}
+
+.timeline-item::before {
+  content: ' ';
+  position: absolute;
+  top: 15px;
+  left: -40px;
+  width: 40px;
+  height: var(--line-weight);
+  background: var(--line-color);
+  transform: scaleY(0.5);
+}
+
+.timeline-item::after {
+  content: ' ';
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  border-radius: 0%;
+  border: var(--line-weight) solid var(--line-color);
+  top: 11px;
+  left: -44.5px;
+  transform: rotate(45deg);
+  background-color: var(--bg);
+}
+
+.timeline-item>h4 {
+  margin: 0px 5px 0px 0px;
+}
+
+.timeline-item>p {
+  margin: 0;
+  line-height: 1.6em;
+}
+
+.timeline-item ul {
+  font-family: 'EB Garamond', serif;
+  list-style-type: square;
+  margin-top: 10px;
+}
