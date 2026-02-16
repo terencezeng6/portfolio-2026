@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&display=swap');
 
 :root {
-  --bg: hsl(0, 0%, 95%);
-  --bg-dark: hsl(0, 0%, 90%);
+  --bg-light: hsl(0, 0%, 95%);
+  --bg: hsl(0, 0%, 90%);
+  --bg-dark: hsl(0, 0%, 85%);
   --text: hsl(0, 0%, 5%);
   --accent: hsl(225, 50%, 45%);
   --line-color: hsl(0, 0%, 0%);
@@ -15,10 +16,6 @@ body {
   color: var(--text);
 }
 
-h1 {
-  font-weight: 500;
-}
-
 .layout {
   /* center layout */
   display: flex;
@@ -28,6 +25,7 @@ h1 {
 .sidebar {
   /* fixed width */
   width: 220px;
+  /* height: 100%; */
   padding: 20px 40px;
   /* temporary green for visualization */
   background-color: var(--bg);
@@ -42,7 +40,7 @@ h1 {
 .content {
   /* fixed width */
   width: 800px;
-  padding: 40px 80px;
+  padding: 40px 80px 0;
   font-family: 'EB Garamond', serif;
 }
 
@@ -64,7 +62,8 @@ h1 {
   padding: 0;
   list-style: none;
   position: relative;
-  padding: 40px 0;
+  margin-top: 40px;
+  padding-bottom: 40px;
 }
 
 .timeline::before {
@@ -80,19 +79,12 @@ h1 {
 .timeline>li {
   padding-left: 40px;
   margin-bottom: 40px;
-  line-height: 1.8em;
-}
-
-.timeline-item {
-  padding: 25px;
-  border: var(--line-weight) solid var(--line-color);
-  position: relative;
 }
 
 .timeline-item::before {
   content: ' ';
   position: absolute;
-  top: 15px;
+  top: 38px;
   left: -40px;
   width: 40px;
   height: var(--line-weight);
@@ -107,14 +99,24 @@ h1 {
   width: 8px;
   border-radius: 0%;
   border: var(--line-weight) solid var(--line-color);
-  top: 11px;
+  top: 34px;
   left: -44.5px;
   transform: rotate(45deg);
   background-color: var(--bg);
 }
 
+.timeline-item {
+  padding: 25px;
+  border: var(--line-weight) solid var(--line-color);
+  position: relative;
+  background-color: var(--bg-light);
+  box-shadow: 2px 2px 0px var(--line-color);
+}
+
 .timeline-item>h4 {
-  margin: 0px 5px 0px 0px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.6em;
 }
 
 .timeline-item>p {
