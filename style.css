@@ -5,6 +5,7 @@
   --bg: hsl(0, 0%, 90%);
   --bg-dark: hsl(0, 0%, 85%);
   --text: hsl(0, 0%, 5%);
+  --accent-light: hsl(225, 50%, 90%);
   --accent: hsl(225, 50%, 45%);
   --line-color: hsl(0, 0%, 0%);
   --line-weight: 1px;
@@ -33,8 +34,24 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
-.sidebar p {
+.sidebar h3 {
   font-size: 24px;
+  font-weight: 400;
+  margin: 4px;
+  padding: 10px;
+  border-bottom: 1px solid var(--bg);
+  transition: 0.2s;
+}
+
+.sidebar h3:hover {
+  border-bottom: 1px solid var(--line-color);
+}
+
+.sidebar h3:active {
+  background-color: var(--accent);
+  color: var(--bg);
+  border-bottom: 1px solid var(--accent);
+  transition: 0s;
 }
 
 .content {
@@ -111,6 +128,12 @@ body {
   position: relative;
   background-color: var(--bg-light);
   box-shadow: 2px 2px 0px var(--line-color);
+  transition: background-color 0.3s;
+}
+
+.timeline-item:hover {
+  background-color: var(--accent-light);
+  box-shadow: 4px 4px 0px var(--line-color);
 }
 
 .timeline-item>h4 {
