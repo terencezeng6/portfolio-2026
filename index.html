@@ -5,23 +5,25 @@
 <head>
   <title> Terence Zeng </title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="components/sidebar.js" type="text/javascript" defer></script>
 </head>
 
 <body>
   <div class="layout">
-    <aside class="sidebar">
-      <h1 style="color: var(--accent);">Terence Zeng</h1>
-      <h3>Projects</h3>
-      <h3>Gallery</h3>
-      <h3>Extras</h3>
-    </aside>
+    <js-sidebar></js-sidebar>
     <main class="content">
       <div class="intro">
-        <p>Hi!</p>
-        <p>I'm a recent graduate from the University of Illinois with a degree in computer engineering and a minor in
+
+        <p>Hi!
+          <br>
+          <br>
+          I'm a recent graduate from the University of Illinois with a degree in computer engineering and a minor in
           mathematics.
           Currently, my interests lie in embedded systems, operating systems, machine learning, and theoretical computer
-          science.</p>
+          science.
+        </p>
+
+        <img src="images/me.jpg" alt="Profile Picture" class="profile-picture">
       </div>
       <div class="timeline-block">
         <div class="section-header">

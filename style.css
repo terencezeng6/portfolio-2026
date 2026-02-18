@@ -1,20 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&display=swap');
 
 :root {
-  --bg-light: hsl(0, 0%, 95%);
-  --bg: hsl(0, 0%, 90%);
-  --bg-dark: hsl(0, 0%, 85%);
+  --bg-light: hsl(0, 0%, 100%);
+  --bg: hsl(0, 0%, 95%);
+  --bg-dark: hsl(0, 0%, 90%);
   --text: hsl(0, 0%, 5%);
-  --accent-light: hsl(225, 50%, 90%);
-  --accent: hsl(225, 50%, 45%);
+  --accent-light: hsl(225, 50%, 95%);
+  --accent: hsl(225, 50%, 50%);
   --line-color: hsl(0, 0%, 0%);
   --line-weight: 1px;
 }
 
 body {
-  padding: 30px;
+  padding: 60px;
   background-color: var(--bg);
   color: var(--text);
+}
+
+.profile-picture {
+  max-width: 400px;
+  width: 100%;
+  flex-shrink: 0;
+  height: auto;
+  margin: 20px 0px 40px 40px;
+}
+
+#name {
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+#name:active {
+  color: var(--bg);
 }
 
 .layout {
@@ -24,30 +42,29 @@ body {
 }
 
 .sidebar {
-  /* fixed width */
-  width: 220px;
-  /* height: 100%; */
+  max-width: 240px;
+  width: 100%;
   padding: 20px 40px;
-  /* temporary green for visualization */
   background-color: var(--bg);
-  border-right: var(--line-weight) solid black;
   font-family: 'Outfit', sans-serif;
 }
 
-.sidebar h3 {
+.sidebar a {
+  display: block;
   font-size: 24px;
-  font-weight: 400;
   margin: 4px;
   padding: 10px;
   border-bottom: 1px solid var(--bg);
+  color: var(--text);
+  text-decoration: none;
   transition: 0.2s;
 }
 
-.sidebar h3:hover {
+.sidebar a:hover {
   border-bottom: 1px solid var(--line-color);
 }
 
-.sidebar h3:active {
+.sidebar a:active {
   background-color: var(--accent);
   color: var(--bg);
   border-bottom: 1px solid var(--accent);
@@ -56,9 +73,15 @@ body {
 
 .content {
   /* fixed width */
-  width: 800px;
-  padding: 40px 80px 0;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px 80px 0;
   font-family: 'EB Garamond', serif;
+  border-left: var(--line-weight) solid black;
+}
+
+.intro {
+  display: flex;
 }
 
 .intro p {
@@ -66,7 +89,7 @@ body {
 }
 
 .timeline-block {
-  margin-top: 60px;
+  margin-top: 40px;
   font-family: 'Outfit', sans-serif;
 }
 
@@ -80,7 +103,7 @@ body {
   list-style: none;
   position: relative;
   margin-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .timeline::before {
