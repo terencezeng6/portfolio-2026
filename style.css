@@ -17,30 +17,8 @@ body {
   color: var(--text);
 }
 
-.profile-picture {
-  max-width: 400px;
-  width: 100%;
-  flex-shrink: 0;
-  height: auto;
-  margin: 20px 0px 40px 40px;
-  border: 1px solid var(--line-color);
-}
 
-#name {
-  font-size: 2em;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-#name:active {
-  color: var(--bg);
-}
-
-.layout {
-  /* center layout */
-  display: flex;
-  justify-content: center;
-}
+/* SIDEBAR STUFF */
 
 .sidebar {
   max-width: 240px;
@@ -48,6 +26,7 @@ body {
   padding: 20px 40px;
   background-color: var(--bg);
   font-family: 'Outfit', sans-serif;
+  border-right: 1px solid var(--line-color);
 }
 
 .sidebar a {
@@ -72,21 +51,64 @@ body {
   transition: 0s;
 }
 
+#name {
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+#name:active {
+  color: var(--bg);
+}
+
+
+/* MAIN CONTENT */
+
+.layout {
+  /* center layout */
+  display: flex;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+}
+
+.intro p {
+  font-size: 20px;
+  flex: 1;
+}
+
+.intro img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 40px 40px 0px;
+  border: 1px solid var(--line-color);
+}
+
+@media (max-width: 1365px) {
+  .intro {
+    flex-direction: column;
+    /* align-items: center; */
+    /* text-align: center; */
+  }
+
+  .intro img {
+    width: 60%;
+    max-width: 300px;
+    margin: 20px 0px;
+  }
+}
+
 .content {
   /* fixed width */
   max-width: 800px;
   width: 100%;
   padding: 20px 80px 0;
   font-family: 'EB Garamond', serif;
-  border-left: var(--line-weight) solid black;
-}
-
-.intro {
-  display: flex;
-}
-
-.intro p {
-  font-size: 20px;
 }
 
 .timeline-block {
