@@ -23,6 +23,7 @@ body {
   flex-shrink: 0;
   height: auto;
   margin: 20px 0px 40px 40px;
+  border: 1px solid var(--line-color);
 }
 
 #name {
