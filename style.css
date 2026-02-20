@@ -51,6 +51,10 @@ body {
   transition: 0s;
 }
 
+.sidebar .current {
+  color: var(--accent);
+}
+
 #name {
   font-size: 2em;
   font-weight: 600;
