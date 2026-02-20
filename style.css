@@ -237,10 +237,11 @@ body {
   box-shadow: 4px 4px 0 var(--line-color);
 }
 
-.timeline-item>h4 {
+h4 {
   margin: 0;
   font-weight: 600;
   line-height: 1.6em;
+  font-family: 'Outfit', sans-serif;
 }
 
 .timeline-item>p {
@@ -267,4 +268,31 @@ body {
   .timeline-item::after {
     left: -24.5px;
   }
+}
+
+/* PROJECT GRID */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 390px));
+  gap: 20px;
+}
+
+.project-card {
+  border: var(--line-weight) solid var(--line-color);
+  padding: 20px;
+  background-color: var(--bg-light);
+  box-shadow: 2px 2px 0 var(--line-color);
+  transition: background-color 0.3s;
+}
+
+.project-card:hover {
+  box-shadow: 4px 4px 0 var(--line-color);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 20px 0;
 }
