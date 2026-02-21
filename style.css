@@ -279,6 +279,7 @@ h4 {
 }
 
 .project-card {
+  position: relative;
   border: var(--line-weight) solid var(--line-color);
   padding: 20px;
   background-color: var(--bg-light);
@@ -295,4 +296,24 @@ h4 {
   height: auto;
   display: block;
   margin: 0 0 20px 0;
+}
+
+.project-button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 4px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--bg-light);
+  color: var(--text);
+  transition: 0.2s;
+}
+
+.project-button:hover {
+  border-bottom: 1px solid var(--line-color);
+}
+
+.project-button:active {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
 }
