@@ -281,6 +281,7 @@ h4 {
 @media (max-width: 1365px) {
   .project-grid {
     justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(390px, 100%), min(390px, 100%)));
   }
 }
 
