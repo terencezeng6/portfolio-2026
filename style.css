@@ -278,6 +278,12 @@ h4 {
   gap: 20px;
 }
 
+@media (max-width: 1365px) {
+  .project-grid {
+    justify-content: center;
+  }
+}
+
 .project-card {
   position: relative;
   border: var(--line-weight) solid var(--line-color);
