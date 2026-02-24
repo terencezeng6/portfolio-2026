@@ -11,6 +11,20 @@
   --line-weight: 1px;
 }
 
+/* reserves scrollbar space even if it's not needed */
+html {
+  scrollbar-gutter: stable;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00000040;
+  border-radius: 4px;
+}
+
 body {
   padding: min(60px, 5%);
   background-color: var(--bg);
